@@ -225,10 +225,10 @@ public class RSApplet extends Applet
         clickX = i;
         clickY = j;
         clickTime = System.currentTimeMillis();
-        if (mouseevent.isMetaDown()) {
+        if (mouseevent.getButton() == MouseEvent.BUTTON3) {
             clickMode1 = 2;
             clickMode2 = 2;
-        } else {
+        } else if (mouseevent.getButton() == MouseEvent.BUTTON1) {
             clickMode1 = 1;
             clickMode2 = 1;
         }
